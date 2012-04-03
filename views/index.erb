@@ -2,20 +2,14 @@
   <head><title>My Uploader</title></head>
   <body>
 
-<?php
-include "mongo.php";
+<center>
 
-if( $_FILES["f"] ) {
-  $m = new Mongo();
-  $m->selectDB( "phpsite" )->getGridFS()->storeUpload( "f" );
-  echo "Saved " . $_FILES["f"]["name"] . "\n";
-}
-?>
-
-    <form method="POST" enctype="multipart/form-data">
-       Filename: <input type="file" name="f"><br />
-       <input type="submit" value="upload" />
+<br /><br />    <form action="upload.php" method="POST" enctype="multipart/form-data">
+       Email Address: <input type="text" name ="email"><br /><br />
+       <input type="submit" value="Submit Email" />
     </form>
+
+</center>
 
   </body>
 </html>
