@@ -1,8 +1,8 @@
 <?php
 
-if( $_POST["name"] ) {
+if( $_POST["email"] ) {
   $m = new Mongo();
-  $m->selectDB( "phpsite" )->getGridFS()->storeUpload( "name" );
-  echo "Saved " . $_POST["name"]["name"] . "\n";
+  $m->selectDB( "phpsite" )->getGridFS()->storeUpload( "email" );
+  echo "Saved " . $_POST["email"]["name"] . "\n";
 }
 ?>
