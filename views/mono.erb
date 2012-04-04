@@ -1,0 +1,21 @@
+<html>
+
+<body>
+<br /><br />
+<% require 'sinatra' %>
+<% require 'mongo' %>
+
+<% @conn = Mongo::Connection.new %>
+<% @db = @conn['sample-db'] %>
+<% @coll = @db['test2'] %>
+
+<% @coll.insert({'b' => @email}) %>
+
+
+
+Thank you for submitting your email: <%= @email %>.
+
+
+
+</body>
+</html>
